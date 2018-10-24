@@ -21,11 +21,16 @@ namespace YellowNotes.Api.Attributes
 
         protected override bool IsAuthorized(HttpActionContext actionContext)
         {
+            actionContext.ControllerContext.Request.GetDependencyScope();
+
             var baseIsAuthorized = base.IsAuthorized(actionContext);
             if (!baseIsAuthorized)
             {
                 return false;
             }
+
+            var claimsPrincipal = actionContext.RequestContext.Principal as ClaimsPrincipal;
+            claimsIdentity.Find
 
             var simpleAuthorizeAttribute =
                 actionContext.ActionDescriptor.GetCustomAttributes<SimpleAuthorizeAttribute>(false).FirstOrDefault() ??

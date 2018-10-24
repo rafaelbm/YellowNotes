@@ -11,6 +11,7 @@ namespace YellowNotes.Api.Services
             {
                 ["lkurzyniec"] = new UserModel { FirstName = "Łukasz", LastName = "Kurzyniec", UserName = "lkurzyniec", Password = "D7IFNjmsmNjrFNmrJpSxnEQBf9h/LLgUsuOI+fWuyc0=" },  //wieza132
                 ["jkowalski"] = new UserModel { FirstName = "Jan", LastName = "Kowalski", UserName = "jkowalski", Password = "7NcYcNGWMxapfjrDQIyYNa2M8PPBvHA1J8MCZVNPda4=" },        //test123
+                ["rafael"] = new UserModel { FirstName = "Rafael", LastName = "Machado", UserName = "rafael", Password = "7NcYcNGWMxapfjrDQIyYNa2M8PPBvHA1J8MCZVNPda4=" },        //test123
             };
 
         public bool AuthenticateUser(string userName, string password, out UserModel user)
